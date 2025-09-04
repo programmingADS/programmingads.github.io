@@ -20,7 +20,8 @@ Het volgende programma leest de naam van de gebruiker in met behulp van het `inp
 
 ```python
 name = input("Wat is je naam? ")
-print("Hallo, " + name)
+print("Hallo, ")
+print(name)
 ```
 
 De uitvoering van dit programma kan er als volgt uitzien (invoer van de gebruiker in het rood):
@@ -28,14 +29,16 @@ De uitvoering van dit programma kan er als volgt uitzien (invoer van de gebruike
 <sample-output>
 
 Wat is je naam? **Paul Python**
-Hallo, Paul Python
+Hallo, 
+Paul Python
 
 </sample-output>
 
 <sample-output>
 
 Wat is je naam? **Paula Programmeur**
-Hallo, Paula Programmeur
+Hallo, 
+Paula Programmeur
 
 </sample-output>
 
@@ -65,61 +68,6 @@ Paul
 
 </in-browser-programming-exercise>
 
-## Verwijzen naar een variabele
-
-Een enkele variabele kan meerdere keren in een programma worden gebruikt:
-
-```python
-name = input("Wat is je naam? ")
-
-print("Hallo, " + name + "!")
-print(name + " is een leuke naam.")
-```
-
-Als de gebruiker de naam `Paul Python` invoert, drukt dit programma het volgende af:
-
-<sample-output>
-
-Wat is je naam? **Paul Python**
-Hallo, Paul Python!
-Paul Python is een leuke naam.
-
-</sample-output>
-
-Laten we eens kijken naar de manier waarop het `print`-commando hierboven wordt gebruikt. Tussen de haakjes van het commando bevinden zich zowel tekst tussen aanhalingstekens als variabelen die verwijzen naar de invoer van de gebruiker. Deze zijn gecombineerd met een `+`-operator, die twee strings samenvoegt tot één string.
-
-Strings en variabelen kunnen naar wens worden gecombineerd:
-
-```python
-name = input("Wat is je naam? ")
-
-print("Hallo " + name + "! Laat me even controleren: je naam is " + name + "?")
-```
-
-Als de gebruiker de naam `Ellen Example` invoert, wordt het volgende afgedrukt:
-
-<sample-output>
-
-Wat is je naam? **Ellen Example**
-Hallo Ellen Example! Laat me even controleren: je naam is Ellen Example?
-
-</sample-output>
-
-<in-browser-programming-exercise name="Naam en uitroeptekens" tmcname="part01-07_name_and_exclamation_marks">
-
-Schrijf een programma dat de naam van de gebruiker vraagt en deze twee keer op één regel afdrukt, waarbij een uitroepteken aan het begin van de regel staat, een ander tussen de twee namen en een derde aan het einde van de regel.
-
-Het programma zou als volgt moeten werken:
-
-<sample-output>
-
-Wat is je naam? **Paul**
-!Paul!Paul!
-
-</sample-output>
-
-</in-browser-programming-exercise>
-
 ## Meer dan één invoer
 
 Een programma kan om meer dan één invoer vragen. Let op hoe elk `input`-commando de ontvangen waarde opslaat in een andere variabele.
@@ -130,9 +78,12 @@ email = input("Wat is je e-mailadres? ")
 nickname = input("Wat is je bijnaam? ")
 
 print("Laten we zeker weten dat we het goed hebben")
-print("Je naam: " + name)
-print("Je e-mailadres: " + email)
-print("Je bijnaam: " + nickname)
+print("Je naam: ")
+print(name)
+print("Je e-mailadres: ")
+print(email)
+print("Je bijnaam: ")
+print(nickname)
 ```
 
 Het programma kan bijvoorbeeld het volgende afdrukken:
@@ -143,9 +94,12 @@ Wat is je naam? **Raghad Fictitious**
 Wat is je e-mailadres? **raghad99@example.com**
 Wat is je bijnaam? **Raggy**
 Laten we zeker weten dat we het goed hebben
-Je naam: Raghad Fictitious
-Je e-mailadres: raghad99@example.com
-Je bijnaam: Raggy
+Je naam: 
+Raghad Fictitious
+Je e-mailadres: 
+raghad99@example.com
+Je bijnaam: 
+Raggy
 
 </sample-output>
 
@@ -153,10 +107,12 @@ Als dezelfde variabele wordt gebruikt om meerdere invoeren op te slaan, wordt el
 
 ```python
 adres = input("Wat is je adres? ")
-print("Dus je woont op adres " + adres)
+print("Dus je woont op adres:")
+print(adres)
 
 adres = input("Typ alstublieft een nieuw adres in: ")
-print("Je adres is nu " + adres)
+print("Je adres is nu:")
+print(adres)
 ```
 
 Een voorbeelduitvoering van het programma:
@@ -164,9 +120,11 @@ Een voorbeelduitvoering van het programma:
 <sample-output>
 
 Wat is je adres? **Pythonpad 101, Flat 3D**
-Dus je woont op adres Pythonpad 101, Flat 3D
+Dus je woont op adres: 
+Pythonpad 101, Flat 3D
 Typ alstublieft een nieuw adres in: **Nieuwe Weg 999**
-Je adres is nu Nieuwe Weg 999
+Je adres is nu:
+Nieuwe Weg 999
 
 </sample-output>
 
@@ -176,7 +134,8 @@ Dit betekent dat als dezelfde variabele wordt gebruikt om twee opeenvolgende inv
 adres = input("Wat is je adres? ")
 adres = input("Typ alstublieft een nieuw adres in: ")
 
-print("Je adres is nu " + adres)
+print("Je adres is nu:")
+print(adres)
 ```
 
 Een voorbeeld van hoe de uitvoer van het programma eruit zou kunnen zien:
@@ -185,9 +144,12 @@ Een voorbeeld van hoe de uitvoer van het programma eruit zou kunnen zien:
 
 Wat is je adres? **Pythonpad 10**
 Typ alstublieft een nieuw adres in: **Programmeurslaan 23**
-Je adres is nu Programmeurslaan 23
+Je adres is nu:
+Programmeurslaan 23
 
 </sample-output>
+
+TODO: F string
 
 <in-browser-programming-exercise name="Naam en adres" tmcname="part01-08_name_and_address">
 
