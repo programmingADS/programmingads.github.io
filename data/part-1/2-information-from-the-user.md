@@ -29,7 +29,7 @@ De uitvoering van dit programma kan er als volgt uitzien (invoer van de gebruike
 <sample-output>
 
 Wat is je naam? **Paul Python**
-Hallo, 
+Hallo,
 Paul Python
 
 </sample-output>
@@ -37,7 +37,7 @@ Paul Python
 <sample-output>
 
 Wat is je naam? **Paula Programmeur**
-Hallo, 
+Hallo,
 Paula Programmeur
 
 </sample-output>
@@ -94,11 +94,11 @@ Wat is je naam? **Raghad Fictitious**
 Wat is je e-mailadres? **raghad99@example.com**
 Wat is je bijnaam? **Raggy**
 Laten we zeker weten dat we het goed hebben
-Je naam: 
+Je naam:
 Raghad Fictitious
-Je e-mailadres: 
+Je e-mailadres:
 raghad99@example.com
-Je bijnaam: 
+Je bijnaam:
 Raggy
 
 </sample-output>
@@ -120,7 +120,7 @@ Een voorbeelduitvoering van het programma:
 <sample-output>
 
 Wat is je adres? **Pythonpad 101, Flat 3D**
-Dus je woont op adres: 
+Dus je woont op adres:
 Pythonpad 101, Flat 3D
 Typ alstublieft een nieuw adres in: **Nieuwe Weg 999**
 Je adres is nu:
@@ -149,11 +149,45 @@ Programmeurslaan 23
 
 </sample-output>
 
-TODO: F string
+## Afdrukken met f-strings
+
+Wat als we meer flexibiliteit en controle willen over wat we afdrukken? Zogenaamde _f-strings_ zijn een andere manier om tekst op te maken in Python. De manier van schrijven kan in het begin wat verwarrend lijken, maar uiteindelijk zijn f-strings vaak de eenvoudigste manier om tekst op te maken.
+
+Met f-strings zou het vorige voorbeeld er als volgt uitzien:
+
+```python
+resultaat = 10 * 25
+print(f"De uitkomst is {resultaat}")
+```
+
+Laten we dit uit elkaar halen. Aan het begin van de string die we willen afdrukken staat het karakter _f_. Dit vertelt Python dat wat volgt een f-string is. Binnen de string, omringd door accolades, staat de variabelenaam `resultaat`. De waarde die het bevat, wordt een deel van de afgedrukte string. De uitvoer is precies hetzelfde als in de vorige voorbeelden:
+
+<sample-output>
+
+De uitkomst is 250
+
+</sample-output>
+
+Eén enkele f-string kan meerdere variabelen bevatten. Bijvoorbeeld, deze code
+
+```python
+naam = "Mark"
+leeftijd = 37
+woonplaats = "Palo Alto"
+print(f"Hallo {naam}, je bent {leeftijd} jaar oud. Je woont in {woonplaats}.")
+```
+
+drukt het volgende af:
+
+<sample-output>
+
+Hallo Mark, je bent 37 jaar oud. Je woont in Palo Alto.
+
+</sample-output>
 
 <in-browser-programming-exercise name="Naam en adres" tmcname="part01-08_name_and_address">
 
-Schrijf een programma dat de naam en het adres van de gebruiker vraagt. Het programma moet ook de gegeven informatie afdrukken, als volgt:
+Schrijf een programma dat de naam en het adres van de gebruiker vraagt. Het programma moet ook de gegeven informatie afdrukken door print f-strings, als volgt:
 
 <sample-output>
 
@@ -169,22 +203,6 @@ Londen EC05 6AW
 
 </in-browser-programming-exercise>
 
-<in-browser-programming-exercise name="Corrigeer de code: Uitspraken" tmcname="part01-09_utterances">
-
-Hier is een programma dat om drie uitspraken moet vragen en deze moet afdrukken, zoals hieronder:
-
-<sample-output>
-
-Het 1e deel: **hickory**
-Het 2e deel: **dickory**
-Het 3e deel: **dock**
-hickory-dickory-dock!
-
-</sample-output>
-
-Er is echter iets mis met de onderstaande code. Corrigeer het alstublieft.
-
-</in-browser-programming-exercise>
 
 <in-browser-programming-exercise name="Verhaal" tmcname="part01-10_story">
 
@@ -203,11 +221,3 @@ Mary is a valiant knight, born in the year 1572. One morning Mary woke up to an 
 Het verhaal moet veranderen op basis van de invoer die door de gebruiker wordt gegeven.
 
 </in-browser-programming-exercise>
-
-<!--
-
-A quiz to review the contents of this section:
-
-<quiz id="10cb3510-d8a6-5e9b-b372-c85c4c7eb957"></quiz>
-
--->
